@@ -22,6 +22,21 @@ import {
   SiJavascript,
   SiRender,
 } from "react-icons/si";
+import {
+  Code,
+  Database,
+  Globe,
+  Layout,
+  Server,
+  Smartphone,
+  Terminal,
+  Figma,
+  GitBranch,
+  Cpu,
+  Layers,
+} from "lucide-react"
+import React from "react";
+import { technologies } from "./Info";
 
 const skills = {
   Frontend: [
@@ -51,9 +66,14 @@ const skills = {
     { name: "Cypress", icon: SiCypress },
     { name: "Render", icon: SiRender },
   ],
-};
+}
+
+
 
 export const Skills = () => {
+
+
+
   return (
     <section className="w-full px-30 py-16 text-white bg-black">
       <motion.h2
@@ -91,6 +111,12 @@ export const Skills = () => {
           </motion.div>
         ))}
       </div>
+
+
+
+
+
+
     </section>
   );
 };

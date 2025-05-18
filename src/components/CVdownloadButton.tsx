@@ -7,7 +7,7 @@ const CvDownloadButton = () => {
       <button className="button">
         <div className="dots_border" />
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="/cv.png"
           fill="none"
           viewBox="0 0 24 24"
           className="sparkle"
