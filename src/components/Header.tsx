@@ -15,7 +15,12 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-export const Header = () => {
+
+interface HeaderProps {
+  activeSection: string
+}
+
+export default function Header({ activeSection }: HeaderProps) {
   const nav = [
     { name: "Home", path: "/" },
     { name: "About", path: "/aboutme" },
@@ -26,7 +31,7 @@ export const Header = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
+  const [currentSection, setCurrentSection] = useState<string>("");
   const { setTheme } = useTheme();
 
   useEffect(() => {
@@ -39,7 +44,7 @@ export const Header = () => {
           currentSection = section.getAttribute("id") || "";
         }
       });
-      setActiveSection(currentSection);
+      setCurrentSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -90,7 +95,7 @@ export const Header = () => {
                 <Link
                   href={link.path}
                   className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    activeSection === link.path.substring(1)
+                    currentSection === link.path.substring(1)
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground"
                   }`}

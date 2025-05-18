@@ -97,13 +97,13 @@ export default function ContactMe() {
                     href={info.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="box-border flex items-start gap-4 p-5 rounded-lg border border-gray-700 bg-gray-200/10 hover:bg-muted-foreground transition-colors"
+                    className="box-border flex items-start gap-4 p-5 rounded-lg border border-gray-700 bg-gray-200/10 hover:shadow-[0_0_20px_#9f7aea]  transition-colors"
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                   >
-                    <div className="p-2 bg-gray-200 rounded-md text-primary">{info.icon}</div>
+                    <div className="p-2 bg-gray-200 rounded-md text-primary">{React.createElement(info.icon)}</div>
                     <div>
-                      <h4 className="font-medium">{info.title}</h4>
+                      <h4 className="font-medium text-purple-400">{info.title}</h4>
                       <p className="text-gray-200  ">{info.value}</p>
                     </div>
                   </motion.a>

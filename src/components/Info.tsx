@@ -1,27 +1,30 @@
+import { Mail, MapPin, Phone } from "lucide-react"
+
 // Personal Information
 export const personalInfo = {
   name: "Ariunjargal Ochirpurev",
-  image: "/placeholder.svg?height=200&width=200",
+  nickname: "Arii",
   title: "Full Stack Developer",
   email: "ariunjargal.ochirpurev@gmail.com",
   phone: "+976 86981230",
   location: "Ulaanbaatar, Mongolia",
-  bio: "A passionate Full Stack Developer creating modern and responsive web applications that lead to the success of the overall product.",
+  bio: "A passionate Full Stack Developer with international experience, currently enhancing my skills at Pinecone Academy.",
   longBio:
-    "I am a full stack developer with a passion for creating interactive and responsive web applications. I have experience working with JavaScript, React, Node.js, Express, PostgreSQL, MongoDB, HTML, CSS, and more. My journey in web development started in 2018, and since then, I've worked on various projects that have helped me grow as a developer. I enjoy solving complex problems and learning new technologies.",
-  availability: "Open to opportunities",
+    "I am a versatile professional with experience in restaurant management, office administration, and now pursuing a career in full stack development. With a background in economic management from Nagaoka University in Japan, I bring a unique perspective to problem-solving and project development. My journey in web development started recently, and I'm excited to combine my diverse experience with new technical skills.",
+  availability: "Currently studying, open to opportunities",
   resumeLink: "#",
-};
+  birthday: "December 30, 1998",
+}
 
 // Social Media Links
 export const socialLinks = {
-  github: "https://github.com/Ariunjargal-O", 
+  github: "https://github.com/Ariunjargal-O",
   linkedin: "https://www.linkedin.com/in/ariunjargal-ochirpurev-28ba30300/",
-  facebook:
-    "https://www.facebook.com/profile.php?id=100010655025939&locale=ja_JP",
+  twitter: "https://twitter.com/yourusername",
   instagram: "https://www.instagram.com/opti.ari/",
-  
-};
+  facebook: "https://www.facebook.com/profile.php?id=100010655025939&locale=ja_JP",
+  // Add more social links as needed
+}
 
 // Skills Configuration
 export const skills = [
@@ -29,253 +32,310 @@ export const skills = [
     category: "Frontend",
     icon: "Layout",
     items: [
-      { name: "React", level: 95 },
-      { name: "Next.js", level: 90 },
-      { name: "TypeScript", level: 85 },
-      { name: "Tailwind CSS", level: 90 },
+      { name: "HTML/CSS", level: 85 },
+      { name: "JavaScript", level: 80 },
+      { name: "React", level: 75 },
+      { name: "Next.js", level: 70 },
+      { name: "Tailwind CSS", level: 85 },
+      { name: "TypeScript", level: 70 },
+      { name: "Framer Motion", level: 65 },
     ],
   },
   {
     category: "Backend",
     icon: "Server",
     items: [
-      { name: "Node.js", level: 90 },
-      { name: "Express", level: 85 },
-      { name: "Python", level: 75 },
-      { name: "GraphQL", level: 80 },
+      { name: "Node.js", level: 75 },
+      { name: "Express", level: 70 },
+      { name: "MongoDB", level: 75 },
+      { name: "PostgreSQL", level: 70 },
+      { name: "Prisma", level: 65 },
+      { name: "REST APIs", level: 75 },
+      { name: "GraphQL", level: 60 },
     ],
   },
   {
-    category: "Database",
-    icon: "Database",
+    category: "Tools & Testing",
+    icon: "Code",
     items: [
-      { name: "MongoDB", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "Firebase", level: 85 },
-      { name: "Prisma", level: 75 },
+      { name: "Git/GitHub", level: 80 },
+      { name: "Vercel", level: 75 },
+      { name: "Postman", level: 70 },
+      { name: "Render", level: 65 },
+      { name: "Jest", level: 60 },
+      { name: "Cypress", level: 60 },
+      { name: "Figma", level: 70 },
     ],
   },
-];
+  {
+    category: "Soft Skills",
+    icon: "Briefcase",
+    items: [
+      { name: "Fast Learning", level: 95 },
+      { name: "Leadership", level: 90 },
+      { name: "Time Management", level: 85 },
+      { name: "Problem Solving", level: 90 },
+      { name: "Teamwork", level: 95 },
+      { name: "Responsibility", level: 90 },
+    ],
+  },
+]
 
 // Technologies you work with
 export const technologies = [
   { name: "HTML5", icon: "Globe" },
   { name: "CSS3", icon: "Layers" },
   { name: "JavaScript", icon: "Code" },
+  { name: "TypeScript", icon: "Code" },
+  { name: "React", icon: "Code" },
+  { name: "Next.js", icon: "Server" },
+  { name: "Node.js", icon: "Server" },
+  { name: "MongoDB", icon: "Database" },
+  { name: "PostgreSQL", icon: "Database" },
+  { name: "Tailwind CSS", icon: "Palette" },
+  { name: "Prisma", icon: "Database" },
+  { name: "GraphQL", icon: "Network" },
   { name: "Git", icon: "GitBranch" },
   { name: "Figma", icon: "Figma" },
-  { name: "React Native", icon: "Smartphone" },
-  { name: "Docker", icon: "Terminal" },
-  { name: "AWS", icon: "Cpu" },
-];
+  { name: "Jest", icon: "TestTube" },
+  { name: "Cypress", icon: "TestTube" },
+]
 
 // Projects
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing my skills, projects, and experience.",
     longDescription:
-      "This comprehensive e-commerce solution includes user authentication, product catalog with filtering and search, shopping cart, checkout process with Stripe integration, order management, and an admin dashboard. Built with a focus on performance and user experience.",
+      "This responsive portfolio website was built using Next.js and Tailwind CSS. It features smooth animations, dark/light mode, and a contact form. The project helped me strengthen my React skills and learn about responsive design principles.",
     image: "/placeholder.svg?height=600&width=800",
-    category: "fullstack",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "Express"],
+    category: "frontend",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Ariunjargal-O",
     features: [
-      "User authentication and profiles",
-      "Product catalog with search and filters",
-      "Shopping cart and wishlist",
-      "Secure checkout with Stripe",
-      "Order tracking and history",
-      "Admin dashboard for inventory management",
+      "Responsive design for all devices",
+      "Dark/light mode toggle",
+      "Smooth scroll animations",
+      "Interactive UI components",
+      "Contact form with validation",
+      "Project showcase section",
     ],
   },
   {
     id: 2,
     title: "Task Management App",
-    description:
-      "A collaborative task management application with real-time updates and team functionality.",
+    description: "A simple task management application to organize daily activities.",
     longDescription:
-      "This task management application helps teams organize their work with features like task creation, assignment, due dates, priority levels, and status tracking. It includes real-time updates using WebSockets, file attachments, comments, and team collaboration tools.",
+      "This task management application helps users organize their work with features like task creation, due dates, priority levels, and status tracking. It was built as part of my learning journey at Pinecone Academy.",
     image: "/placeholder.svg?height=600&width=800",
-    category: "frontend",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Supabase",
-      "React Query",
-    ],
+    category: "fullstack",
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Ariunjargal-O",
     features: [
-      "Task creation and assignment",
+      "Task creation and management",
       "Due dates and priority levels",
-      "Real-time updates with WebSockets",
-      "File attachments and comments",
-      "Team collaboration tools",
-      "Calendar and Kanban views",
+      "Task filtering and sorting",
+      "User authentication",
+      "Data persistence with MongoDB",
+      "Responsive UI for mobile and desktop",
     ],
   },
   {
     id: 3,
-    title: "Finance Dashboard",
-    description:
-      "An analytics dashboard for financial data visualization with interactive charts and reports.",
+    title: "E-commerce Platform",
+    description: "A full-featured online shopping platform with product catalog and cart functionality.",
     longDescription:
-      "This finance dashboard provides a comprehensive view of financial data with interactive charts, customizable reports, and data analysis tools. It includes features for tracking expenses, income, investments, and financial goals, with export capabilities and notification alerts.",
+      "This e-commerce platform allows users to browse products, add items to cart, and complete the checkout process. It includes user authentication, product filtering, and order management features.",
     image: "/placeholder.svg?height=600&width=800",
-    category: "frontend",
-    technologies: ["React", "D3.js", "Material UI", "Redux", "Firebase"],
+    category: "fullstack",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Prisma", "Tailwind CSS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Ariunjargal-O",
     features: [
-      "Interactive data visualization",
-      "Expense and income tracking",
-      "Investment portfolio analysis",
-      "Financial goal setting",
-      "Customizable reports and exports",
-      "Notification alerts for financial events",
+      "User authentication and profiles",
+      "Product catalog with search and filters",
+      "Shopping cart functionality",
+      "Checkout process",
+      "Responsive design",
+      "Admin dashboard for product management",
     ],
   },
-  // Add more projects as needed
-];
+  {
+    id: 4,
+    title: "Weather Dashboard",
+    description: "A weather application showing current conditions and forecasts.",
+    longDescription:
+      "This weather dashboard provides current conditions and forecasts with features like location search, hourly and daily forecasts, and weather alerts. It uses a third-party weather API to fetch real-time data.",
+    image: "/placeholder.svg?height=600&width=800",
+    category: "frontend",
+    technologies: ["React", "JavaScript", "Weather API", "CSS"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/Ariunjargal-O",
+    features: [
+      "Current weather conditions",
+      "5-day forecast",
+      "Location search",
+      "Responsive design",
+      "Weather icons and visualizations",
+      "Temperature unit conversion",
+    ],
+  },
+]
 
 // Experience
 export const experiences = [
   {
-    title: "Senior Frontend Developer",
-    company: "Company Name",
-    location: "City, Country",
-    date: "2022 - Present",
-    description:
-      "Led the frontend development team in building a modern SaaS platform. Implemented new features, improved performance, and mentored junior developers.",
+    title: "Full Stack Developer Student",
+    company: "Pinecone Academy",
+    location: "Ulaanbaatar, Mongolia",
+    date: "November 2024 - June 2025",
+    description: "Currently studying full stack development, focusing on modern web technologies and best practices.",
     achievements: [
-      "Reduced page load time by 40% through code optimization and lazy loading",
-      "Implemented a component library that increased development speed by 30%",
-      "Mentored 5 junior developers who went on to become mid-level developers",
+      "Learning MERN stack (MongoDB, Express, React, Node.js)",
+      "Building responsive and interactive web applications",
+      "Collaborating with peers on group projects",
+      "Developing full-stack applications with TypeScript and Next.js",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "TypeScript", "Next.js"],
+    type: "education",
+  },
+  {
+    title: "Office Manager",
+    company: "New-line Education Center",
+    location: "Ulaanbaatar, Mongolia",
+    date: "September 2024 - April 2025",
+    description: "Managed office operations and administrative functions for an education center.",
+    achievements: [
+      "Streamlined administrative processes",
+      "Coordinated with teaching staff and students",
+      "Maintained office records and documentation",
+      "Implemented time management systems",
+    ],
+    technologies: ["MS Office", "Administrative Systems", "Customer Service"],
     type: "work",
   },
   {
-    title: "Full Stack Developer",
-    company: "Company Name",
-    location: "City, Country",
-    date: "2020 - 2022",
+    title: "Restaurant Manager",
+    company: "Restaurant",
+    location: "Tokyo, Japan",
+    date: "April 2023 - June 2024",
     description:
-      "Developed and maintained multiple web applications for clients across various industries. Worked on both frontend and backend development.",
+      "Managed daily operations of a restaurant, including staff supervision, customer service, and inventory management.",
     achievements: [
-      "Built a custom CRM system that increased client productivity by 25%",
-      "Implemented automated testing that reduced bugs in production by 60%",
-      "Designed and developed APIs used by mobile and web applications",
+      "Supervised a team of 10+ staff members",
+      "Improved customer satisfaction ratings",
+      "Optimized inventory management processes",
+      "Implemented marketing strategies to increase customer base",
     ],
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    technologies: ["POS Systems", "Inventory Management", "Team Leadership", "Marketing"],
     type: "work",
   },
   {
-    title: "Frontend Developer",
-    company: "Company Name",
-    location: "City, Country",
-    date: "2018 - 2020",
-    description:
-      "Created responsive and interactive user interfaces for client websites. Collaborated with designers and backend developers to implement features.",
+    title: "Bachelor's Degree in Economic Management",
+    company: "Nagaoka University",
+    location: "Niigata, Japan",
+    date: "April 2020 - March 2023",
+    description: "Studied Economic Management with a focus on business administration and international economics.",
     achievements: [
-      "Developed 15+ client websites with responsive designs",
-      "Implemented accessibility improvements that increased WCAG compliance",
-      "Created interactive data visualizations for financial clients",
-    ],
-    technologies: ["JavaScript", "HTML", "CSS", "jQuery"],
-    type: "work",
-  },
-  // Add education
-  {
-    title: "Bachelor of Science in Computer Science",
-    company: "University Name",
-    location: "City, Country",
-    date: "2014 - 2018",
-    description:
-      "Graduated with honors. Focused on web development, algorithms, and data structures. Participated in coding competitions and hackathons.",
-    achievements: [
-      "Graduated with a 3.8 GPA",
-      "Won 2nd place in the annual hackathon",
-      "Published research paper on web accessibility",
+      "Completed coursework in business management, economics, and finance",
+      "Participated in international student programs",
+      "Developed analytical and problem-solving skills",
+      "Gained cross-cultural communication experience",
     ],
     technologies: [],
     type: "education",
   },
-  // Add more experiences as needed
-];
+  {
+    title: "Student",
+    company: "Citi University",
+    location: "Mongolia",
+    date: "October 2016 - March 2020",
+    description: "Studied at Citi University in Mongolia.",
+    achievements: ["Completed foundational coursework", "Participated in student activities"],
+    technologies: [],
+    type: "education",
+  },
+  {
+    title: "High School Student",
+    company: "NUM Lycee Baigali-Ekh High School",
+    location: "Mongolia",
+    date: "September 2013 - June 2016",
+    description: "Completed high school education with a focus on general studies.",
+    achievements: ["Graduated with good academic standing", "Participated in extracurricular activities"],
+    technologies: [],
+    type: "education",
+  },
+]
 
 // Testimonials
 export const testimonials = [
   {
     id: 1,
-    name: "Client Name",
-    role: "Position at Company",
+    name: "Instructor Name",
+    role: "Instructor at Pinecone Academy",
     image: "/placeholder.svg?height=100&width=100",
     content:
-      "Working with this developer was a game-changer for our project. They not only built a robust platform but also provided valuable insights that improved our product. Their technical expertise combined with business understanding makes them stand out from other developers.",
-    initials: "CN",
+      "Ariunjargal is a dedicated student who consistently demonstrates a strong work ethic and eagerness to learn. Their attention to detail and problem-solving skills are impressive, and they're always willing to help fellow students.",
+    initials: "IN",
   },
   {
     id: 2,
-    name: "Client Name",
-    role: "Position at Company",
+    name: "Former Colleague",
+    role: "New-line Education Center",
     image: "/placeholder.svg?height=100&width=100",
     content:
-      "An exceptional developer who consistently delivers high-quality work. Their attention to detail and problem-solving skills are impressive. They took our vague requirements and transformed them into an intuitive, beautiful application that exceeded our expectations.",
-    initials: "CN",
+      "Working with Arii was a pleasure. They brought organization and efficiency to our office operations and were always professional and friendly. Their ability to manage multiple tasks while maintaining quality is remarkable.",
+    initials: "FC",
   },
   {
     id: 3,
-    name: "Client Name",
-    role: "Position at Company",
+    name: "Restaurant Owner",
+    role: "Tokyo Restaurant",
     image: "/placeholder.svg?height=100&width=100",
     content:
-      "As a designer, I appreciate developers who can bring designs to life exactly as envisioned. This developer does this and more. Their implementation was pixel-perfect, and they even suggested improvements that enhanced the user experience while maintaining the design integrity.",
-    initials: "CN",
+      "Ariunjargal was an exceptional manager who consistently delivered high-quality service. Their leadership skills and attention to customer satisfaction helped our restaurant thrive. They have a natural talent for team management.",
+    initials: "RO",
   },
-  // Add more testimonials as needed
-];
+]
 
 // Stats
 export const stats = [
-  { value: "5+", label: "Years Experience" },
-  { value: "20+", label: "Projects Completed" },
-  { value: "10+", label: "Happy Clients" },
-  { value: "3", label: "Awards" },
-];
+  { value: "3+", label: "Years in Japan" },
+  { value: "2", label: "Languages" },
+  { value: "5+", label: "Projects" },
+  { value: "3", label: "Countries Lived In" },
+]
 
 // Contact Information
 export const contactInfo = [
   {
-    icon: "Mail",
+    icon: Mail,
     title: "Email",
     value: "ariunjargal.ochirpurev@gmail.com",
-    link: "mailto:your.email@example.com",
+    link: "mailto:ariunjargal.ochirpurev@gmail.com",
   },
   {
-    icon: "Phone",
+    icon: Phone,
     title: "Phone",
     value: "+976 86981230",
-    link: "tel:+11234567890",
+    link: "tel:+97686981230",
   },
   {
-    icon: "MapPin",
+    icon: MapPin,
     title: "Location",
     value: "Ulaanbaatar, Mongolia",
-    link: "https://maps.google.com/?q=Ulaanbaatar,Mongolia",
+    link: "https://maps.google.com/?q=Ulaanbaatar,+Mongolia",
   },
-];
+]
 
 // Interests
 export const interests = [
-  "Hiking in the mountains",
-  "Reading science fiction novels",
-  "Exploring new coffee shops",
-  "Playing chess and strategic board games",
-  "Photography and visual arts",
-];
+  "Learning new technologies",
+  "International travel",
+  "Languages and cultures",
+  "Photography",
+  "Outdoor activities",
+]

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FileText, Award, Briefcase, GraduationCap } from "lucide-react";
 import Link from "next/link";
@@ -7,6 +7,9 @@ import { Button } from "./ui/button";
 import { interests, personalInfo, stats } from "./Info";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import CvDownloadButton from "./CVdownloadButton";
+
+
+
 
 export default function About() {
   const ref = useRef(null);
@@ -16,14 +19,21 @@ export default function About() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [0, 1, 1, 0]);
+  const scrollOpacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.9, 1],
+    [0, 1, 1, 0]
+  );
 
+  
   return (
     <section
       id="about"
       ref={ref}
       className="py-20 md:py-32 relative overflow-hidden bg-black text-gray-200"
     >
+     
+
       {/* Background elements */}
       <div className="absolute top-0 right-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
@@ -51,7 +61,10 @@ export default function About() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div style={{ y, opacity }} className="relative">
+          <motion.div
+            style={{ y, opacity: scrollOpacity }}
+            className="relative"
+          >
             <div className="relative">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -113,11 +126,26 @@ export default function About() {
             className="space-y-8"
           >
             <div className="border-2 p-10 border-gray-200 rounded-md">
-              <Tabs defaultValue="about" className="w-full bor">
-                <TabsList className="grid w-full grid-cols-3 bg-gray-800 border-gray-700 text-gray-200">
-                  <TabsTrigger value="about">About</TabsTrigger>
-                  <TabsTrigger value="education">Education</TabsTrigger>
-                  <TabsTrigger value="interests">Interests</TabsTrigger>
+              <Tabs defaultValue="about" className="w-full ">
+                <TabsList className="grid w-full grid-cols-3 bg-gray-800 border-gray-700 text-gray-200 gap-3">
+                  <TabsTrigger
+                    value="about"
+                    className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer bg-black/20 backdrop-blur-sm"
+                  >
+                    About
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="education"
+                    className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm "
+                  >
+                    Education
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="interests"
+                    className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm "
+                  >
+                    Interests
+                  </TabsTrigger>
                 </TabsList>
                 <TabsContent value="about" className="space-y-4 pt-4">
                   <h3 className="text-2xl font-bold">

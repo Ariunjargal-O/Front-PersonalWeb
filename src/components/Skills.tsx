@@ -1,5 +1,4 @@
 'use client'
-import { motion } from "framer-motion";
 import {
   SiReact,
   SiNextdotjs,
@@ -22,6 +21,9 @@ import {
   SiJavascript,
   SiRender,
 } from "react-icons/si";
+import React, { useRef } from "react";
+import { technologies } from "./Info";
+import { motion, useScroll, useTransform } from "framer-motion"
 import {
   Code,
   Database,
@@ -34,9 +36,13 @@ import {
   GitBranch,
   Cpu,
   Layers,
+  Briefcase,
+  TestTube,
+  Network,
+  Palette,
 } from "lucide-react"
-import React from "react";
-import { technologies } from "./Info";
+import type { JSX } from "react"
+
 
 const skills = {
   Frontend: [
@@ -72,10 +78,11 @@ const skills = {
 
 export const Skills = () => {
 
+ 
 
 
   return (
-    <section className="w-full px-30 py-16 text-white bg-black">
+    <section id="skills" className="w-full px-30 py-16 text-white bg-black">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -115,7 +122,8 @@ export const Skills = () => {
 
 
 
-
+ 
+      
 
     </section>
   );
