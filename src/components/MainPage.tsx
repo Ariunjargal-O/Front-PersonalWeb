@@ -109,106 +109,9 @@ export default function MainPage() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 bg-black"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 "
     >
-      <div
-        className="absolute inset-0 w-full h-full bg-black"
-        style={{
-          background: "linear-gradient(to bottom, #000000 0%, #050520 100%)",
-          backgroundSize: "cover",
-        }}
-      />
-
-      {/* Star field */}
-      <div className="absolute inset-0 w-full h-full">
-        {stars.map((star) => (
-          <motion.div
-            key={star.id}
-            className="absolute rounded-full bg-white"
-            style={{
-              width: star.size,
-              height: star.size,
-              top: `${star.top}%`,
-              left: `${star.left}%`,
-              boxShadow:
-                star.size > 2
-                  ? `0 0 ${star.size * 2}px rgba(255, 255, 255, 0.8)`
-                  : "0 0 2px #fff",
-            }}
-            animate={
-              star.pulse
-                ? {
-                    opacity: [0.2, 1, 0.2],
-                    scale: [0.8, 1.2, 0.8],
-                  }
-                : {
-                    opacity: [0.5, 1, 0.5],
-                    scale: [1, 1.1, 1],
-                  }
-            }
-            transition={{
-              duration: star.animationDuration,
-              repeat: Infinity,
-              delay: star.delay,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Shooting stars */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
-        {shootingStars.map((star) => (
-          <ShootingStar key={star.id} delay={star.delay} />
-        ))}
-      </div>
-
-      {/* Galaxy nebulas/clusters - fewer, more subtle */}
-      <div className="absolute inset-0 w-full h-full">
-        {Array.from({ length: 3 }).map((_, i) => (
-          <motion.div
-            key={`galaxy-${i}`}
-            className="absolute rounded-full"
-            style={{
-              width: Math.random() * 400 + 200,
-              height: Math.random() * 400 + 200,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              background: `radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.05) 50%, rgba(0, 0, 0, 0) 70%)`,
-            }}
-            animate={{
-              opacity: [0.2, 0.5, 0.2],
-              scale: [0.95, 1.05, 0.95],
-            }}
-            transition={{
-              duration: Math.random() * 15 + 20,
-              repeat: Infinity,
-              repeatType: "reverse",
-              delay: Math.random() * 5,
-            }}
-          />
-        ))}
-
-        {/* Add a subtle blue nebula */}
-        <motion.div
-          className="absolute rounded-full"
-          style={{
-            width: 600,
-            height: 600,
-            top: "30%",
-            right: "10%",
-            background: `radial-gradient(circle, rgba(30, 144, 255, 0.05) 0%, rgba(0, 0, 139, 0.03) 50%, rgba(0, 0, 0, 0) 70%)`,
-          }}
-          animate={{
-            opacity: [0.3, 0.6, 0.3],
-            scale: [0.9, 1.1, 0.9],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      </div>
+      
 
       {/* Background gradient */}
       <div className="absolute inset-0 -z-10">
@@ -296,7 +199,7 @@ export default function MainPage() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="group">
-                <Link href="#projects">
+                <Link href="#projects" className="bg-transparent">
                   View Projects{" "}
                   <motion.span
                     animate={{ x: [0, 5, 0] }}
@@ -373,15 +276,119 @@ export default function MainPage() {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
         >
-          <span className="text-sm text-gray-200 mb-2">Scroll Down</span>
+          <span className="text-sm dark:text-gray-200 mb-2">Scroll Down</span>
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
           >
-            <ChevronDown className="h-6 w-6 text-gray-200" />
+            <ChevronDown className="h-6 w-6 dark:text-gray-200" />
           </motion.div>
         </motion.div>
       </div>
     </section>
   );
 }
+
+
+
+
+
+
+{/* <div
+        className="absolute inset-0 w-full h-full bg-black"
+        style={{
+          background: "linear-gradient(to bottom, #000000 0%, #050520 100%)",
+          backgroundSize: "cover",
+        }}
+      />
+
+      {/* Star field */}
+      // <div className="absolute inset-0 w-full h-full">
+      //   {stars.map((star) => (
+      //     <motion.div
+      //       key={star.id}
+      //       className="absolute rounded-full bg-white"
+      //       style={{
+      //         width: star.size,
+      //         height: star.size,
+      //         top: `${star.top}%`,
+      //         left: `${star.left}%`,
+      //         boxShadow:
+      //           star.size > 2
+      //             ? `0 0 ${star.size * 2}px rgba(255, 255, 255, 0.8)`
+      //             : "0 0 2px #fff",
+      //       }}
+      //       animate={
+      //         star.pulse
+      //           ? {
+      //               opacity: [0.2, 1, 0.2],
+      //               scale: [0.8, 1.2, 0.8],
+      //             }
+      //           : {
+      //               opacity: [0.5, 1, 0.5],
+      //               scale: [1, 1.1, 1],
+      //             }
+      //       }
+      //       transition={{
+      //         duration: star.animationDuration,
+      //         repeat: Infinity,
+      //         delay: star.delay,
+      //       }}
+      //     />
+      //   ))}
+      // </div>
+
+      {/* Shooting stars */}
+      // <div className="absolute inset-0 w-full h-full overflow-hidden">
+      //   {shootingStars.map((star) => (
+      //     <ShootingStar key={star.id} delay={star.delay} />
+      //   ))}
+      // </div>
+
+      // {/* Galaxy nebulas/clusters - fewer, more subtle */}
+      // <div className="absolute inset-0 w-full h-full">
+      //   {Array.from({ length: 3 }).map((_, i) => (
+      //     <motion.div
+      //       key={`galaxy-${i}`}
+      //       className="absolute rounded-full"
+      //       style={{
+      //         width: Math.random() * 400 + 200,
+      //         height: Math.random() * 400 + 200,
+      //         top: `${Math.random() * 100}%`,
+      //         left: `${Math.random() * 100}%`,
+      //         background: `radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.05) 50%, rgba(0, 0, 0, 0) 70%)`,
+      //       }}
+      //       animate={{
+      //         opacity: [0.2, 0.5, 0.2],
+      //         scale: [0.95, 1.05, 0.95],
+      //       }}
+      //       transition={{
+      //         duration: Math.random() * 15 + 20,
+      //         repeat: Infinity,
+      //         repeatType: "reverse",
+      //         delay: Math.random() * 5,
+      //       }}
+      //     />
+      //   ))}
+
+      //   {/* Add a subtle blue nebula */}
+      //   <motion.div
+      //     className="absolute rounded-full"
+      //     style={{
+      //       width: 600,
+      //       height: 600,
+      //       top: "30%",
+      //       right: "10%",
+      //       background: `radial-gradient(circle, rgba(30, 144, 255, 0.05) 0%, rgba(0, 0, 139, 0.03) 50%, rgba(0, 0, 0, 0) 70%)`,
+      //     }}
+      //     animate={{
+      //       opacity: [0.3, 0.6, 0.3],
+      //       scale: [0.9, 1.1, 0.9],
+      //     }}
+      //     transition={{
+      //       duration: 25,
+      //       repeat: Infinity,
+      //       repeatType: "reverse",
+      //     }}
+      //   />
+      // </div> */}

@@ -22,10 +22,10 @@ export default function Experience() {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.9, 1], [0, 1, 1, 0])
 
   return (
-    <section id="experience" ref={ref} className="py-20 md:py-32 relative overflow-hidden  bg-black">
+    <section id="experience" ref={ref} className="py-20 md:py-32 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
+      {/* <div className="absolute top-0 right-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div> */}
 
       <div className="container mx-auto px-4">
         <motion.div

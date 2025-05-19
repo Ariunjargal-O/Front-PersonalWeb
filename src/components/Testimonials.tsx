@@ -34,11 +34,11 @@ export default function FeedBack() {
     <section
       id="testimonials"
       ref={ref}
-      className="py-20 md:py-32 relative overflow-hidden bg-black"
+      className="py-20 md:py-32 relative overflow-hidden "
     >
       {/* Background elements */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-background to-background"></div>
-
+     
+      
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,12 +54,12 @@ export default function FeedBack() {
             transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
             className="w-16 h-16 rounded-full bg-gray-200/30 flex items-center justify-center mx-auto mb-6"
           >
-            <MessageSquare className="h-8 w-8 text-white" />
+            <MessageSquare className="h-8 w-8 " />
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Client Testimonials
           </h2>
-          <div className="h-1 w-20 bg-gray-200/30 mx-auto mb-8"></div>
+          <div className="h-1 w-20 bg-gray-500 mx-auto mb-8"></div>
           <p className="text-muted-foreground text-lg">
             Here's what people are saying about working with me
           </p>
@@ -74,9 +74,9 @@ export default function FeedBack() {
               <Quote className="h-20 w-20 text-purple-400 text-bold shadow-2xs" />
             </div>
 
-            <Card className=" p-8 md:p-10 shadow-lg bg-black">
-              <CardContent></CardContent>
-              <CardContent className="min-h-[200px] bg-black">
+            <Card className=" p-8 md:p-10 shadow-lg">
+              
+              <CardContent className="min-h-[200px] ">
                 {testimonials.map((testimonial, index) => (
                   <motion.div
                     key={testimonial.id}
@@ -89,7 +89,7 @@ export default function FeedBack() {
                     transition={{ duration: 0.5 }}
                     className={`${activeIndex !== index ? "hidden" : ""}`}
                   >
-                    <p className="text-lg md:text-xl italic mb-6 text-gray-200/80">
+                    <p className="text-lg md:text-xl italic mb-6 dark:text-gray-200/80">
                       {testimonial.content}
                     </p>
                     <div className="flex items-center">

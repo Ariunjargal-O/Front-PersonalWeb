@@ -48,9 +48,9 @@ export default function ContactMe() {
   }
 
   return (
-    <section id="contact" ref={ref} className="py-20 md:py-32 relative overflow-hidden bg-black text-gray-200">
+    <section id="contact" ref={ref} className="py-20 md:py-32 relative overflow-hiddentext-gray-200">
       {/* Background gradient blur */}
-      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary/10 via-black to-black"></div>
+      
 
       <div className="container mx-auto px-4">
         <motion.div
@@ -67,11 +67,11 @@ export default function ContactMe() {
             transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
             className="w-16 h-16 rounded-full bg-gray-200/30 flex items-center justify-center mx-auto mb-6"
           >
-            <Mail className="h-8 w-8 text-gray-200" />
+            <Mail className="h-8 w-8 " />
           </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="h-1 w-20 bg-gray-500 mx-auto mb-8"></div>
-          <p className="text-gray-200 text-lg">
+          <p className=" text-lg">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
         </motion.div>

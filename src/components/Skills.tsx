@@ -82,7 +82,9 @@ export const Skills = () => {
 
 
   return (
-    <section id="skills" className="w-full px-30 py-16 text-white bg-black">
+    <section id="skills" className="w-full px-30 py-16 text-white">
+
+      
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}

@@ -24,9 +24,9 @@ export default function Projects() {
   const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-    <section id="projects" ref={ref} className="py-20 md:py-32 relative overflow-hidden bg-black">
+    <section id="projects" ref={ref} className="py-20 md:py-32 relative overflow-hidden ">
       {/* Background elements */}
-      <div className="absolute top-0 left-0 -z-10 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background"></div>
+      {/* <div className="absolute top-0 left-0 -z-10 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-background to-background"></div> */}
 
       <div className="container mx-auto px-4">
         <motion.div
@@ -43,9 +43,9 @@ export default function Projects() {
             transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
             className="w-16 h-16 rounded-full bg-gray-200/30 flex items-center justify-center mx-auto mb-6"
           >
-            <Layers className="h-8 w-8 text-gray-200" />
+            <Layers className="h-8 w-8 " />
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">My Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 ">My Projects</h2>
           <div className="h-1 w-20 bg-muted-foreground mx-auto mb-8"></div>
           <p className="text-muted-foreground text-lg mb-8">
             Here are some of my recent projects. Each one was built to solve a specific problem or explore new

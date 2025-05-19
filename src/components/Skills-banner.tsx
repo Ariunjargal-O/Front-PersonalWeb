@@ -104,22 +104,22 @@ export default function SkillsBannerClean() {
   return (
     <div
       ref={containerRef}
-      className="relative py-28 overflow-hidden bg-black"
-      style={{
-        boxShadow: "0 0 70px rgba(0, 0, 0, 0.9) inset",
-      }}
+      className="relative py-28 overflow-hidden light:bg-transparent dark:bg-black"
+      // style={{
+      //   boxShadow: "0 0 70px rgba(0, 0, 0, 0.9) inset",
+      // }}
     >
       {/* Radial gradient that follows mouse */}
       <motion.div
         className="absolute inset-0 z-0 opacity-50 pointer-events-none"
-        style={
-          {
-            background:
-              "radial-gradient(circle 500px at var(--x) var(--y), rgba(138, 43, 226, 0.15), transparent 80%)",
-            "--x": `${mousePosition.x}px`,
-            "--y": `${mousePosition.y}px`,
-          } as any
-        }
+        // style={
+        //   {
+        //     background:
+        //       "radial-gradient(circle 500px at var(--x) var(--y), rgba(138, 43, 226, 0.15), transparent 80%)",
+        //     "--x": `${mousePosition.x}px`,
+        //     "--y": `${mousePosition.y}px`,
+        //   } as any
+        // }
       />
 
       {/* Animated particles */}
@@ -315,8 +315,8 @@ export default function SkillsBannerClean() {
       </div>
 
       {/* Overlay gradient edges for smooth fade effect */}
-      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none"></div>
-      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none"></div>
+      {/* <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-20 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-20 pointer-events-none"></div> */}
     </div>
   );
 }

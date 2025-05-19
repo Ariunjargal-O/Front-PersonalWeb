@@ -8,9 +8,6 @@ import { interests, personalInfo, stats } from "./Info";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import CvDownloadButton from "./CVdownloadButton";
 
-
-
-
 export default function About() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -25,18 +22,19 @@ export default function About() {
     [0, 1, 1, 0]
   );
 
-  
   return (
     <section
       id="about"
       ref={ref}
-      className="py-20 md:py-32 relative overflow-hidden bg-black text-gray-200"
+      className="py-20 md:py-32 relative  text-gray-200"
     >
-     
-
-      {/* Background elements */}
-      <div className="absolute top-0 right-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 -z-10 w-1/3 h-1/3 bg-primary/5 rounded-full blur-3xl"></div>
+      {/* <div
+        className="absolute inset-0 w-full h-full bg-black"
+        style={{
+          background: "linear-gradient(to bottom, #050520 100%,  #050520 70%)",
+          backgroundSize: "cover",
+        }}
+      /> */}
 
       <div className="container mx-auto px-4">
         <motion.div
@@ -53,7 +51,7 @@ export default function About() {
             transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
             className="w-16 h-16 rounded-full bg-gray-200/30 flex items-center justify-center mx-auto mb-6"
           >
-            <Briefcase className="h-8 w-8 text-gray-200" />
+            <Briefcase className="h-8 w-8 " />
           </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="h-1 w-30 bg-gray-500 mx-auto mb-8"></div>
@@ -123,63 +121,56 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-8 relative z-20" // Add this
           >
-            <div className="border-2 p-10 border-gray-200 rounded-md">
-              <Tabs defaultValue="about" className="w-full ">
-                <TabsList className="grid w-full grid-cols-3 bg-gray-800 border-gray-700 text-gray-200 gap-3">
-                  <TabsTrigger
-                    value="about"
-                    className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer bg-black/20 backdrop-blur-sm"
-                  >
-                    About
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="education"
-                    className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm "
-                  >
-                    Education
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="interests"
-                    className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm "
-                  >
-                    Interests
-                  </TabsTrigger>
+            <div className="border-2 p-10 border-gray-200 rounded-md z-20">
+              <Tabs defaultValue="about" className="w-full">
+                <TabsList className="grid w-full grid-cols-3 gap-5">
+                  <TabsTrigger value="about" className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm ">About</TabsTrigger>
+                  <TabsTrigger value="education" className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm ">Education</TabsTrigger>
+                  <TabsTrigger value="interests" className="capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm ">Interests</TabsTrigger>
                 </TabsList>
                 <TabsContent value="about" className="space-y-4 pt-4">
                   <h3 className="text-2xl font-bold">
                     A passionate {personalInfo.title} based in{" "}
                     {personalInfo.location}
                   </h3>
-                  <p className="text-gray-400">{personalInfo.longBio}</p>
+                  <p className="text-muted-foreground">
+                    {personalInfo.longBio}
+                  </p>
                 </TabsContent>
                 <TabsContent value="education" className="space-y-4 pt-4">
                   <div className="space-y-4">
                     <div className="flex gap-4">
-                      <GraduationCap className="h-6 w-6 text-primary mt-1" />
+                      <div className="mt-1">
+                        <GraduationCap className="h-6 w-6 text-muted-foreground" />
+                      </div>
                       <div>
                         <h4 className="text-lg font-bold">
-                          Bachelor of Economic and Management
+                          Bachelor of Economic Managemant
                         </h4>
-                        <p className="text-primary">University Nagaoka</p>
-                        <p className="text-sm text-gray-400">2020 - 2023</p>
+                        <p className="text-muted-foreground">Nagaoka University</p>
+                        <p className="text-sm text-muted-foreground">
+                          2020 - 2023
+                        </p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <Award className="h-6 w-6 text-primary mt-1" />
+                      <div className="mt-1">
+                        <Award className="h-6 w-6 text-muted-foreground" />
+                      </div>
                       <div>
-                        <h4 className="text-lg font-bold">
-                          Full stack developer
+                        <h4 className="text-lg font-bold ">
+                          FullStack developer Certification
                         </h4>
-                        <p className="text-primary">Pinecone Academy</p>
-                        <p className="text-sm text-gray-400">2024-2025</p>
+                        <p className="text-muted-foreground">Pineconde Academy</p>
+                        <p className="text-sm text-muted-foreground">2025</p>
                       </div>
                     </div>
                   </div>
                 </TabsContent>
                 <TabsContent value="interests" className="space-y-4 pt-4">
-                  <p className="text-gray-400">
+                  <p className="text-muted-foreground">
                     When I'm not coding, you can find me:
                   </p>
                   <ul className="space-y-2">

@@ -35,6 +35,8 @@ export default function Footer() {
 
   return (
     <footer className=" border-t bg-black">
+
+      
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -53,8 +55,11 @@ export default function Footer() {
                   whileHover={{ y: -3 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Button asChild size="icon" 
-                  className="hover:bg-gray-200 hover">
+                  <Button
+                    asChild
+                    size="icon"
+                    className="hover:bg-gray-200 hover"
+                  >
                     <Link
                       href={link.href}
                       target="_blank"
@@ -71,7 +76,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 grid-cols-2">
               {[
                 "Home",
                 "About",
@@ -129,9 +134,12 @@ export default function Footer() {
         </div>
 
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} {personalInfo.name}. All rights reserved.
-          </p>
+          <div className="flex flex-col justify-start ">
+            <p className="text-muted-foreground text-sm">
+              © {currentYear} {personalInfo.name}. All rights reserved.
+            </p>
+            <p className="text-muted-foreground text-sm">Version 1.0.0</p>
+          </div>
           <p className="text-muted-foreground text-sm mt-2 md:mt-0 flex items-center">
             Designed & Built with{" "}
             <Heart className="h-4 w-4 text-red-500 mx-1" /> using Next.js &
