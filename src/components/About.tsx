@@ -49,13 +49,13 @@ export default function About() {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
-            className="w-16 h-16 rounded-full bg-gray-200/30 flex items-center justify-center mx-auto mb-6"
+            className="w-16 h-16 rounded-full flex items-center bg-gray-200/30 justify-center mx-auto mb-6 "
           >
-            <Briefcase className="h-8 w-8 " />
+            <Briefcase className="h-8 w-8 text-black dark:text-white" />
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-          <div className="h-1 w-30 bg-gray-500 mx-auto mb-8"></div>
-          <p className="text-gray-400 text-lg">Get to know me better</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">About Me</h2>
+          <div className="h-1 w-30  mx-auto mb-8 bg-muted-foreground"></div>
+          <p className="text-muted-foreground text-lg mb-8">Get to know me better</p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -69,7 +69,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="aspect-[6/7] rounded-2xl overflow-hidden border-8 border-background shadow-2xl"
+                className="aspect-[6/7] rounded-2xl overflow-hidden border-8 shadow-2xl dark:border-gray-200"
               >
                 <img
                   src="/placeholder.svg?height=600&width=480"
@@ -83,7 +83,7 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="absolute -bottom-10 -right-10 bg-black p-3 rounded-2xl shadow-xl border-2 border-gray-500"
+                className="absolute -bottom-10 -right-10 dark:bg-black p-3 rounded-2xl shadow-xl border-2 border-gray-500"
               >
                 <div className="grid grid-cols-2 gap-4 border-2 border-gray-400 rounded-lg p-4">
                   {stats.map((stat, i) => (
@@ -95,10 +95,10 @@ export default function About() {
                       transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-gray-200">
+                      <div className="text-3xl font-bold dark:text-gray-200">
                         {stat.value}
                       </div>
-                      <div className="text-sm text-gray-200">{stat.label}</div>
+                      <div className="text-sm dark:text-muted-foreground">{stat.label}</div>
                     </motion.div>
                   ))}
                 </div>
@@ -109,7 +109,7 @@ export default function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="absolute -top-8 -left-8 bg-gray-200 p-4 rounded-full shadow-xl border border-gray-700"
+                className="absolute -top-8 -left-8  p-4 rounded-full shadow-xl border border-gray-700 dark:bg-black"
               >
                 <Award className="h-10 w-10 text-primary" />
               </motion.div>

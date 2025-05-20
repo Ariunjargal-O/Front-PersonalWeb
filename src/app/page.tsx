@@ -72,7 +72,7 @@ export default function Home() {
           >
             {/* Full Background for Light/Dark Theme */}
             <div className={`floating-particles ${theme === "dark" ? "bg-dark-theme" : "bg-light-theme"}`}>
-              <FloatingParticles theme={theme === "dark" || theme === "light" ? theme : null} />
+              <FloatingParticles />
             </div>
 
             {/* Main Content */}

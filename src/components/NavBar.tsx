@@ -80,12 +80,12 @@ export default function Navbar({ activeSection }: NavbarProps) {
               </motion.li>
             ))}
           </ul>
-          <ThemeToggle />
+      
         </nav>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center md:hidden space-x-4">
-          <ThemeToggle />
+          
           <Button
             variant="ghost"
             size="icon"

@@ -59,7 +59,7 @@ export default function Projects() {
                 variant={filter === category ? "default" : "outline"}
                 onClick={() => setFilter(category)}
                 className={`capitalize hover:shadow-[0_0_20px_#9f7aea] transition-colors cursor-pointer  bg-black/20 backdrop-blur-sm ${
-                  filter === category ? "bg-primary text-white" : "text-muted-foreground border-muted-foreground"
+                  filter === category ? "bg-black/30 border-2 border-white/40 text-purple-400 hover:bg-[#171717] hover:text-white" : "text-muted-foreground border-muted-foreground"
                 }`}
               
               >
