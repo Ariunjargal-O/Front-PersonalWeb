@@ -68,7 +68,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className={`relative ${theme === "dark" ? "bg-dark-theme" : "bg-light-theme"}`} // Apply theme classes
+            // className={`relative ${theme === "dark" ? "bg-dark-theme" : "bg-light-theme"}`} // Apply theme classes
           >
             {/* Full Background for Light/Dark Theme */}
             <div className={`floating-particles ${theme === "dark" ? "bg-dark-theme" : "bg-light-theme"}`}>
